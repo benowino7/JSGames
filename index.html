@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function gamming(l) {
+            var winning = ["w", "a", "s", "r"];
+            for (var i = 0; i < winning.length; i++) {
+                if (l == '') {
+                    document.getElementById('s').innerHTML = 'Waiting!';
+                    break;
+                } else if (winning[i] == l) {
+                    document.getElementById('s').innerHTML = 'You have won!';
+                    break;
+                } else {
+                    if (i !=l) {
+                        document.getElementById('s').innerHTML = 'You lose!';
+                    } else {
+                        continue;
+                    }
+                }
+
+
+            }
+            //console.log(winning.length);
+        }
+        // var l = prompt("Enter a letter: ")
+        // gamming(l);
+    </script>
+    <input type="text" name="game" id="game" onkeyup="gamming(game.value)">
+    <span id="s">waiting</span>
+</body>
+
+</html>
